@@ -1,0 +1,71 @@
+,name,stargazers_count,forks_count,subscribers_count,topics,language,created_at,updated_at
+65388917,PythonDataScienceHandbook,34099,15223,1749,"['jupyter-notebook', 'matplotlib', 'numpy', 'pandas', 'python', 'scikit-learn']",Jupyter Notebook,2016-08-10T14:24:36Z,2022-04-13T22:31:48Z
+29749635,data-science-ipython-notebooks,22939,7111,1637,"['aws', 'big-data', 'caffe', 'data-science', 'deep-learning', 'hadoop', 'kaggle', 'keras', 'machine-learning', 'mapreduce', 'matplotlib', 'numpy', 'pandas', 'python', 'scikit-learn', 'scipy', 'spark', 'tensorflow', 'theano']",Python,2015-01-23T19:38:29Z,2022-04-13T20:13:34Z
+61486207,data-science,14626,2569,917,[],,2016-06-19T15:15:36Z,2022-04-14T01:07:02Z
+26382146,data-science-from-scratch,6852,3860,631,[],Python,2014-11-09T02:31:24Z,2022-04-13T21:51:01Z
+85111422,Data-Analysis,4223,3389,349,[],Jupyter Notebook,2017-03-15T19:13:06Z,2022-04-13T11:56:56Z
+43759462,DataSciencePython,4537,1417,348,"['data-science', 'data-scientists', 'python', 'python-tutorial']",Python,2015-10-06T15:26:08Z,2022-04-12T21:00:26Z
+199374876,Data-Science-Notes,6402,2785,221,[],Jupyter Notebook,2019-07-29T03:55:15Z,2022-04-14T00:37:41Z
+22931603,DataScienceSpecialization.github.io,1596,2880,624,[],CSS,2014-08-13T21:17:36Z,2022-04-12T00:21:48Z
+175518691,Data-Science--Cheat-Sheet,441,8613,20,[],,2019-03-14T00:17:17Z,2022-04-12T21:01:16Z
+25270043,DataScienceResources,2957,1290,389,[],,2014-10-15T19:30:03Z,2022-04-13T18:02:05Z
+344191198,Data-Science-For-Beginners,10217,1712,197,"['data-analysis', 'data-science', 'data-visualization', 'pandas', 'python']",Jupyter Notebook,2021-03-03T16:30:15Z,2022-04-14T01:15:33Z
+45271904,cookiecutter-data-science,5652,1840,105,"['ai', 'cookiecutter', 'cookiecutter-data-science', 'cookiecutter-template', 'data-science', 'machine-learning']",Python,2015-10-30T19:19:57Z,2022-04-13T19:22:37Z
+40242771,data-science-blogs,5857,1737,473,"['data-science', 'machine-learning']",Python,2015-08-05T11:58:14Z,2022-04-13T00:03:51Z
+31872332,DataScienceSpCourseNotes,725,2411,151,[],HTML,2015-03-09T00:51:32Z,2022-04-10T13:59:58Z
+93532772,PowerBI-DataScience,24,5793,3,[],,2017-06-06T15:16:21Z,2022-03-21T20:57:12Z
+12104024,go,20788,6035,1670,[],,2013-08-14T08:33:55Z,2022-04-13T19:20:49Z
+24929423,DataScienceR,1764,871,234,"['data-science', 'datascience', 'r', 'text-mining']",R,2014-10-08T07:29:44Z,2022-04-12T18:20:35Z
+11676078,LearnDataScience,2738,1661,371,[],Jupyter Notebook,2013-07-26T02:37:24Z,2022-04-13T18:01:57Z
+244452551,data-science-interviews,5191,1178,179,"['data-science', 'data-science-interviews', 'interview-questions', 'machine-learning']",HTML,2020-03-02T19:06:53Z,2022-04-13T16:32:12Z
+280508180,Data-science,2426,652,95,"['articles', 'artificial-intelligence', 'data-analysis', 'data-science', 'data-visualization', 'machine-learning', 'natural-language-processing', 'python', 'scraping', 'time-series']",Jupyter Notebook,2020-07-17T19:25:27Z,2022-04-14T00:37:01Z
+24671520,DataScienceCourse,681,779,52,[],Jupyter Notebook,2014-10-01T08:45:51Z,2022-04-13T18:54:59Z
+47405227,Data-Science-Wiki,4846,792,376,[],,2015-12-04T13:19:42Z,2022-04-13T14:19:36Z
+14730075,free-data-science-books,2393,1020,362,[],,2013-11-26T21:45:11Z,2022-04-13T18:02:00Z
+230349682,Pandas-Data-Science-Tasks,531,1919,39,[],Jupyter Notebook,2019-12-27T01:11:27Z,2022-04-12T12:42:46Z
+244029618,data-science-on-aws,2550,833,104,[],Jupyter Notebook,2020-02-29T19:33:58Z,2022-04-13T08:59:07Z
+114063532,120-Data-Science-Interview-Questions,2905,1174,124,[],,2017-12-13T02:29:57Z,2022-04-13T14:36:22Z
+21515044,awesome-datascience,18404,5003,1424,"['analytics', 'awesome-list', 'data-mining', 'data-science', 'data-scientists', 'data-visualization', 'deep-learning', 'hacktoberfest', 'machine-learning', 'science']",,2014-07-05T07:07:43Z,2022-04-14T00:22:13Z
+39799721,r4ds,3418,3637,229,"['book', 'bookdown', 'data-science', 'r']",R,2015-07-27T21:52:44Z,2022-04-13T18:30:33Z
+163244728,Data-science-best-resources,1796,715,104,"['analytics', 'api', 'artificial-intelligence', 'aws', 'cheatsheet', 'data-science', 'data-wrangling', 'database', 'deep-learning', 'linux', 'machine-learning', 'neural-network', 'online-course', 'python', 'r', 'reinforcement-learning', 'scikit-learn', 'sql', 'statistics', 'visualization']",,2018-12-27T03:51:46Z,2022-04-13T00:08:06Z
+97804167,DataScience,224,487,41,[],Jupyter Notebook,2017-07-20T07:25:22Z,2022-04-05T02:58:56Z
+336179614,Data-Science-Cheatsheet,3537,507,131,"['cheatsheet', 'data-science', 'machine-learning']",TeX,2021-02-05T06:01:57Z,2022-04-13T21:37:40Z
+117483278,data-science-question-answer,2101,611,88,"['data-science', 'deep-learning', 'machine-learning', 'reinforcement-learning', 'sql', 'statistics', 'system']",Jupyter Notebook,2018-01-15T01:39:56Z,2022-04-12T06:18:53Z
+144331920,Data-Science-Cheatsheet,2062,563,131,[],TeX,2018-08-10T21:02:47Z,2022-04-12T09:19:31Z
+206516448,DataScienceStudyNotes,798,335,57,[],Jupyter Notebook,2019-09-05T08:42:39Z,2022-04-14T01:07:05Z
+148876755,data-science-complete-tutorial,1288,600,65,"['decision-trees', 'feature-selection', 'linear-regression', 'machine-learning', 'nearest-neighbors', 'numpy', 'pandas', 'pipeline', 'scikit-learn']",Jupyter Notebook,2018-09-15T06:37:32Z,2022-04-13T18:27:25Z
+81585547,data-science-on-gcp,1025,598,81,"['cloud-computing', 'data-analysis', 'data-engineering', 'data-pipeline', 'data-processing', 'data-science', 'data-visualization', 'machine-learning']",Jupyter Notebook,2017-02-10T16:46:57Z,2022-04-13T17:25:49Z
+333421996,Learn-Data-Science-For-Free,4793,490,385,"['artificial-intelligence', 'computer-vision', 'data-science', 'datascienceproject', 'deeplearning', 'machine-learning', 'machine-learning-algorithms', 'natural-language-processing', 'neural-networks']",,2021-01-27T13:02:06Z,2022-04-12T19:32:37Z
+228817484,interview-question-data-science-,864,665,65,[],,2019-12-18T10:38:46Z,2022-04-12T06:43:05Z
+93372410,data-scientist-roadmap,5021,1519,294,[],Python,2017-06-05T06:30:08Z,2022-04-13T20:10:09Z
+108658189,competitive-data-science,599,626,35,[],Jupyter Notebook,2017-10-28T14:56:44Z,2022-04-04T10:14:14Z
+18673522,api,9258,1279,358,[],PHP,2014-04-11T12:31:18Z,2022-04-13T21:28:06Z
+24732732,API,8582,556,324,[],,2014-10-02T19:12:50Z,2022-04-13T17:53:10Z
+245077032,API,2373,657,74,"['api', 'cdc', 'corona', 'coronavirus', 'coronavirus-tracking', 'covid', 'covid-19', 'covid19', 'discord', 'discord-server', 'disease', 'hacktoberfest', 'hacktoberfest2021', 'postman', 'redis']",JavaScript,2020-03-05T05:28:12Z,2022-04-09T16:09:32Z
+248910514,api,668,628,44,"['actions', 'covid', 'covid19', 'csv', 'database', 'india', 'json']",Python,2020-03-21T05:05:50Z,2022-04-04T05:26:32Z
+77096333,api,801,323,165,"['ceph', 'cloudnative', 'cloudnativestorage', 'kubernetes', 'multi-cloud', 'openstack', 'sds', 'storage', 'swordfish']",Go,2016-12-22T00:27:54Z,2022-04-07T10:49:54Z
+76586412,api,360,434,98,['api'],Shell,2016-12-15T18:47:13Z,2022-04-13T08:10:35Z
+38112540,Api,844,284,54,"['api-wrapper', 'bot-api', 'sdk', 'telegram-bot']",PHP,2015-06-26T13:26:04Z,2022-04-13T16:52:02Z
+111184073,api,930,247,27,"['api', 'blockchain', 'jsonrpc', 'polkadot', 'polkadot-js', 'substrate', 'web3']",TypeScript,2017-11-18T06:56:55Z,2022-04-12T07:03:31Z
+93561151,api,406,335,28,['k8s-staging'],Go,2017-06-06T20:31:13Z,2022-04-06T09:55:32Z
+100462289,API,897,207,23,"['api', 'aru', 'cosplay', 'docker', 'docs', 'img', 'imgur-api', 'ip', 'json', 'json-api', 'json-server', 'pay', 'phpqrcode', 'proxy', 'qq', 'ssl', 'url', 'voice']",JavaScript,2017-08-16T07:43:12Z,2022-04-13T01:12:27Z
+44259046,API,635,165,64,"['leaflet', 'leafletjs', 'weather', 'windguru']",JavaScript,2015-10-14T15:54:28Z,2022-04-06T05:55:40Z
+54346799,public-apis,189253,21830,3507,"['api', 'apis', 'dataset', 'development', 'free', 'list', 'lists', 'open-source', 'public', 'public-api', 'public-apis', 'resources', 'software']",Python,2016-03-20T23:49:42Z,2022-04-14T01:15:01Z
+182489950,api,675,129,17,"['admin', 'auth', 'nest', 'nestjs', 'nodejs', 'saas', 'saas-startups', 'staart', 'starter-kit', 'stripe', 'typescript']",TypeScript,2019-04-21T04:35:19Z,2022-04-13T16:52:52Z
+6885644,api,394,152,94,"['api', 'headhunter', 'headhunter-api', 'json', 'oauth2', 'rest']",,2012-11-27T15:24:57Z,2022-04-13T01:10:34Z
+108446737,api,63,307,28,[],Go,2017-10-26T17:54:59Z,2022-04-04T14:32:40Z
+100651222,api,899,85,12,[],Python,2017-08-17T22:49:30Z,2022-04-13T11:33:40Z
+316184289,api,386,117,20,"['characters', 'genshin', 'genshin-impact', 'hacktoberfest', 'images', 'impact', 'mihoyo']",JavaScript,2020-11-26T09:38:42Z,2022-04-13T19:44:17Z
+100769259,api,970,70,91,"['bnet', 'bungie', 'destiny', 'openapi-spec']",,2017-08-19T04:15:17Z,2022-04-13T20:35:01Z
+14060127,api,358,104,27,"['movie', 'movie-database', 'movies', 'php-tmdb', 'psr-12', 'psr-17', 'psr-18', 'psr-3', 'psr-6', 'psr-7', 'tmdb', 'tmdb-api', 'tv']",PHP,2013-11-02T03:34:50Z,2022-04-06T11:39:24Z
+7243126,API,125,167,39,[],PHP,2012-12-19T15:55:06Z,2022-04-11T08:29:56Z
+23627382,api,184,128,27,['geocoding'],JavaScript,2014-09-03T16:06:04Z,2022-04-08T16:10:46Z
+127672405,api,251,93,22,['lichess'],TypeScript,2018-04-01T21:24:19Z,2022-04-13T01:53:12Z
+327873058,API,78,134,2,"['api', 'flask', 'flask-restful', 'postman', 'python']",Jupyter Notebook,2021-01-08T10:38:02Z,2022-03-13T12:01:22Z
+169867736,api,121,110,9,"['apollo-server', 'apollo-server-express', 'express', 'graphql', 'javascript', 'jwt', 'mongodb', 'mongoose', 'nodejs', 'oreilly']",JavaScript,2019-02-09T13:04:53Z,2022-03-31T04:02:04Z
+47655910,API,202,82,48,"['agile-board', 'api', 'kanban-board', 'zenhub']",,2015-12-08T23:28:55Z,2022-04-05T04:27:42Z
+58159876,api,509,53,27,[],TypeScript,2016-05-05T20:51:29Z,2022-04-13T10:47:13Z
+102723966,api,335,58,25,"['database', 'exploits', 'python', 'python-wrapper', 'scanner', 'vulnerability', 'vulnerability-detection', 'vulners-api']",Python,2017-09-07T10:27:06Z,2022-04-02T07:57:04Z
+4372486,api,186,69,37,[],,2012-05-18T19:02:23Z,2022-03-10T20:40:48Z
+109716868,api,103,88,14,"['api', 'api-rest', 'api-restfull', 'laravel', 'laravel-api', 'laravel-framework', 'laravel55', 'postman']",PHP,2017-11-06T15:57:48Z,2022-04-08T06:31:57Z
+111382889,api,43,125,30,[],API Blueprint,2017-11-20T08:33:12Z,2022-02-08T09:53:38Z
