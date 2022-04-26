@@ -8,7 +8,7 @@ export GITHUB_TOKEN= <your token>
 export GITHUB_USERNAME= <your username> 
 ```
 
-## Data
+## Datasets
 #### *Repositories*
 `repo_info_stop75.csv` contains information `[name, stargazers_count, forks_count, subscribers_count, topics, language, created_at, updated_at, url, search_word]` for 24207 unique repositories, and where `search_word` is the keyword for which the respository showed up in the search results. 
 
