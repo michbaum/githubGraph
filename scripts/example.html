@@ -1,0 +1,108 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 800;
+            height: 800;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"id": "flask", "label": "flask", "name": "flask", "shape": "dot", "size": 3}, {"id": "machin", "label": "machin", "name": "machin", "shape": "dot", "size": 9}, {"id": "hacktoberfest", "label": "hacktoberfest", "name": "hacktoberfest", "shape": "dot", "size": 5}, {"id": "data", "label": "data", "name": "data", "shape": "dot", "size": 10}, {"id": "react", "label": "react", "name": "react", "shape": "dot", "size": 3}, {"id": "bootstrap", "label": "bootstrap", "name": "bootstrap", "shape": "dot", "size": 4}, {"id": "deep", "label": "deep", "name": "deep", "shape": "dot", "size": 9}, {"id": "json", "label": "json", "name": "json", "shape": "dot", "size": 4}, {"id": "javascript", "label": "javascript", "name": "javascript", "shape": "dot", "size": 6}, {"id": "python", "label": "python", "name": "python", "shape": "dot", "size": 11}, {"id": "aw", "label": "aw", "name": "aw", "shape": "dot", "size": 6}, {"id": "azur", "label": "azur", "name": "azur", "shape": "dot", "size": 4}, {"id": "io", "label": "io", "name": "io", "shape": "dot", "size": 4}, {"id": "googl", "label": "googl", "name": "googl", "shape": "dot", "size": 4}, {"id": "window", "label": "window", "name": "window", "shape": "dot", "size": 3}, {"id": "android", "label": "android", "name": "android", "shape": "dot", "size": 7}, {"id": "maco", "label": "maco", "name": "maco", "shape": "dot", "size": 4}, {"id": "c", "label": "c", "name": "c", "shape": "dot", "size": 4}, {"id": "java", "label": "java", "name": "java", "shape": "dot", "size": 3}, {"id": "algorithm", "label": "algorithm", "name": "algorithm", "shape": "dot", "size": 4}]);
+        edges = new vis.DataSet([{"from": "flask", "label": 30, "to": "machin", "weight": 30}, {"from": "flask", "label": 40, "to": "hacktoberfest", "weight": 40}, {"from": "flask", "label": 20, "to": "data", "weight": 20}, {"from": "flask", "label": 45, "to": "react", "weight": 45}, {"from": "flask", "label": 45, "to": "bootstrap", "weight": 45}, {"from": "flask", "label": 25, "to": "deep", "weight": 25}, {"from": "flask", "label": 35, "to": "json", "weight": 35}, {"from": "flask", "label": 25, "to": "javascript", "weight": 25}, {"from": "flask", "label": 780, "to": "python", "weight": 780}, {"from": "react", "label": 360, "to": "javascript", "weight": 360}, {"from": "react", "label": 70, "to": "aw", "weight": 70}, {"from": "react", "label": 135, "to": "hacktoberfest", "weight": 135}, {"from": "react", "label": 65, "to": "bootstrap", "weight": 65}, {"from": "react", "label": 50, "to": "json", "weight": 50}, {"from": "react", "label": 15, "to": "azur", "weight": 15}, {"from": "react", "label": 115, "to": "io", "weight": 115}, {"from": "react", "label": 65, "to": "googl", "weight": 65}, {"from": "react", "label": 30, "to": "window", "weight": 30}, {"from": "react", "label": 35, "to": "python", "weight": 35}, {"from": "react", "label": 100, "to": "data", "weight": 100}, {"from": "react", "label": 115, "to": "android", "weight": 115}, {"from": "react", "label": 30, "to": "maco", "weight": 30}, {"from": "window", "label": 75, "to": "javascript", "weight": 75}, {"from": "window", "label": 135, "to": "c", "weight": 135}, {"from": "window", "label": 25, "to": "java", "weight": 25}, {"from": "window", "label": 90, "to": "hacktoberfest", "weight": 90}, {"from": "window", "label": 95, "to": "python", "weight": 95}, {"from": "window", "label": 75, "to": "io", "weight": 75}, {"from": "window", "label": 15, "to": "aw", "weight": 15}, {"from": "window", "label": 110, "to": "android", "weight": 110}, {"from": "window", "label": 260, "to": "maco", "weight": 260}, {"from": "window", "label": 20, "to": "googl", "weight": 20}, {"from": "window", "label": 30, "to": "azur", "weight": 30}, {"from": "java", "label": 70, "to": "machin", "weight": 70}, {"from": "java", "label": 85, "to": "json", "weight": 85}, {"from": "java", "label": 205, "to": "hacktoberfest", "weight": 205}, {"from": "java", "label": 40, "to": "deep", "weight": 40}, {"from": "java", "label": 190, "to": "python", "weight": 190}, {"from": "java", "label": 40, "to": "io", "weight": 40}, {"from": "java", "label": 35, "to": "maco", "weight": 35}, {"from": "java", "label": 305, "to": "algorithm", "weight": 305}, {"from": "java", "label": 140, "to": "javascript", "weight": 140}, {"from": "java", "label": 455, "to": "android", "weight": 455}, {"from": "java", "label": 50, "to": "googl", "weight": 50}, {"from": "java", "label": 40, "to": "azur", "weight": 40}, {"from": "java", "label": 70, "to": "aw", "weight": 70}, {"from": "java", "label": 180, "to": "data", "weight": 180}, {"from": "java", "label": 155, "to": "c", "weight": 155}, {"from": "maco", "label": 360, "to": "io", "weight": 360}, {"from": "maco", "label": 85, "to": "c", "weight": 85}, {"from": "maco", "label": 75, "to": "javascript", "weight": 75}, {"from": "maco", "label": 15, "to": "machin", "weight": 15}, {"from": "maco", "label": 70, "to": "python", "weight": 70}, {"from": "maco", "label": 20, "to": "json", "weight": 20}, {"from": "maco", "label": 95, "to": "hacktoberfest", "weight": 95}, {"from": "maco", "label": 90, "to": "android", "weight": 90}, {"from": "maco", "label": 30, "to": "googl", "weight": 30}, {"from": "googl", "label": 110, "to": "javascript", "weight": 110}, {"from": "googl", "label": 30, "to": "data", "weight": 30}, {"from": "googl", "label": 135, "to": "python", "weight": 135}, {"from": "googl", "label": 65, "to": "machin", "weight": 65}, {"from": "googl", "label": 30, "to": "hacktoberfest", "weight": 30}, {"from": "googl", "label": 60, "to": "android", "weight": 60}, {"from": "googl", "label": 40, "to": "deep", "weight": 40}, {"from": "googl", "label": 25, "to": "aw", "weight": 25}, {"from": "googl", "label": 15, "to": "bootstrap", "weight": 15}, {"from": "googl", "label": 40, "to": "io", "weight": 40}, {"from": "googl", "label": 25, "to": "algorithm", "weight": 25}, {"from": "googl", "label": 25, "to": "c", "weight": 25}, {"from": "googl", "label": 20, "to": "azur", "weight": 20}, {"from": "c", "label": 175, "to": "data", "weight": 175}, {"from": "c", "label": 45, "to": "io", "weight": 45}, {"from": "c", "label": 30, "to": "deep", "weight": 30}, {"from": "c", "label": 115, "to": "json", "weight": 115}, {"from": "c", "label": 35, "to": "azur", "weight": 35}, {"from": "c", "label": 55, "to": "android", "weight": 55}, {"from": "c", "label": 235, "to": "algorithm", "weight": 235}, {"from": "c", "label": 225, "to": "python", "weight": 225}, {"from": "c", "label": 110, "to": "javascript", "weight": 110}, {"from": "c", "label": 60, "to": "machin", "weight": 60}, {"from": "c", "label": 195, "to": "hacktoberfest", "weight": 195}, {"from": "bootstrap", "label": 30, "to": "json", "weight": 30}, {"from": "bootstrap", "label": 80, "to": "hacktoberfest", "weight": 80}, {"from": "bootstrap", "label": 65, "to": "python", "weight": 65}, {"from": "bootstrap", "label": 195, "to": "javascript", "weight": 195}, {"from": "io", "label": 480, "to": "android", "weight": 480}, {"from": "io", "label": 25, "to": "machin", "weight": 25}, {"from": "io", "label": 80, "to": "javascript", "weight": 80}, {"from": "io", "label": 125, "to": "hacktoberfest", "weight": 125}, {"from": "io", "label": 35, "to": "deep", "weight": 35}, {"from": "io", "label": 25, "to": "json", "weight": 25}, {"from": "io", "label": 50, "to": "python", "weight": 50}, {"from": "json", "label": 155, "to": "python", "weight": 155}, {"from": "json", "label": 45, "to": "data", "weight": 45}, {"from": "json", "label": 40, "to": "android", "weight": 40}, {"from": "json", "label": 15, "to": "aw", "weight": 15}, {"from": "json", "label": 145, "to": "javascript", "weight": 145}, {"from": "json", "label": 85, "to": "hacktoberfest", "weight": 85}, {"from": "algorithm", "label": 330, "to": "hacktoberfest", "weight": 330}, {"from": "algorithm", "label": 200, "to": "javascript", "weight": 200}, {"from": "algorithm", "label": 175, "to": "machin", "weight": 175}, {"from": "algorithm", "label": 740, "to": "data", "weight": 740}, {"from": "algorithm", "label": 75, "to": "deep", "weight": 75}, {"from": "algorithm", "label": 340, "to": "python", "weight": 340}, {"from": "azur", "label": 50, "to": "aw", "weight": 50}, {"from": "azur", "label": 30, "to": "javascript", "weight": 30}, {"from": "azur", "label": 50, "to": "machin", "weight": 50}, {"from": "azur", "label": 65, "to": "hacktoberfest", "weight": 65}, {"from": "azur", "label": 15, "to": "android", "weight": 15}, {"from": "azur", "label": 40, "to": "data", "weight": 40}, {"from": "azur", "label": 40, "to": "deep", "weight": 40}, {"from": "azur", "label": 75, "to": "python", "weight": 75}, {"from": "hacktoberfest", "label": 290, "to": "data", "weight": 290}, {"from": "hacktoberfest", "label": 130, "to": "android", "weight": 130}, {"from": "hacktoberfest", "label": 235, "to": "javascript", "weight": 235}, {"from": "hacktoberfest", "label": 35, "to": "deep", "weight": 35}, {"from": "hacktoberfest", "label": 70, "to": "machin", "weight": 70}, {"from": "hacktoberfest", "label": 90, "to": "aw", "weight": 90}, {"from": "hacktoberfest", "label": 305, "to": "python", "weight": 305}, {"from": "aw", "label": 70, "to": "machin", "weight": 70}, {"from": "aw", "label": 215, "to": "python", "weight": 215}, {"from": "aw", "label": 35, "to": "data", "weight": 35}, {"from": "aw", "label": 80, "to": "javascript", "weight": 80}, {"from": "aw", "label": 20, "to": "android", "weight": 20}, {"from": "aw", "label": 40, "to": "deep", "weight": 40}, {"from": "javascript", "label": 190, "to": "data", "weight": 190}, {"from": "javascript", "label": 85, "to": "android", "weight": 85}, {"from": "javascript", "label": 35, "to": "deep", "weight": 35}, {"from": "javascript", "label": 225, "to": "python", "weight": 225}, {"from": "javascript", "label": 70, "to": "machin", "weight": 70}, {"from": "android", "label": 20, "to": "data", "weight": 20}, {"from": "android", "label": 20, "to": "machin", "weight": 20}, {"from": "android", "label": 70, "to": "python", "weight": 70}, {"from": "android", "label": 35, "to": "deep", "weight": 35}, {"from": "machin", "label": 1440, "to": "python", "weight": 1440}, {"from": "machin", "label": 1885, "to": "deep", "weight": 1885}, {"from": "machin", "label": 1190, "to": "data", "weight": 1190}, {"from": "deep", "label": 465, "to": "data", "weight": 465}, {"from": "deep", "label": 755, "to": "python", "weight": 755}, {"from": "data", "label": 1165, "to": "python", "weight": 1165}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "continuous"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
