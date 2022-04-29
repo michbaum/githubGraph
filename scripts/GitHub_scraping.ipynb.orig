@@ -330,7 +330,54 @@
     "\n",
     "contributors = set()\n",
     "repo_contributor_rel = set()\n",
+<<<<<<< HEAD
+    "c = pd.read_csv('most_updated_10_contributor_info_2.csv', index_col=0)\n",
+    "contributors = set(c.index)\n",
+    "del c \n",
+    "repos_zip = list(zip(list(repos['url']),list(repos.index)))[23896:]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "decimal-healing",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "c1 = pd.read_csv('repo_contributor_relationship_table_2.csv',index_col=0)\n",
+    "c2 = pd.read_csv('repo_contributor_relationship_table_next1056.csv',index_col=0)\n",
+    "c3 = pd.read_csv('repo_contributor_relationship_table_next818.csv',index_col=0)\n",
+    "c4 = pd.read_csv('repo_contributor_relationship_table_next2122.csv',index_col=0)\n",
+    "c6 = pd.read_csv('repo_contributor_relationship_table_next1978.csv',index_col=0)\n",
+    "c7 = pd.read_csv('repo_contributor_relationship_table_next3079.csv',index_col=0)\n",
+    "c8 = pd.read_csv('repo_contributor_relationship_table_next6818.csv',index_col=0)\n",
+    "c5 = pd.read_csv('repo_contributor_relationship_table_stop75.csv',index_col=0)\n",
+    "pd.concat([c1,c2,c3,c4,c5,c6,c7,c8]).drop_duplicates().to_csv('../raw_data/repo_contributor_relationship_table_3.csv')\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "0f5ff2dd",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "get_all_contributors(repos_zip,repo_contributor_rel,contributors)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "behind-matrix",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "info = all_repo_info(github_topics, stop=75)\n",
+    "topic_rel = topic_relationship_table(info)\n",
+    "topic_rel.to_csv('../raw_data/topic_relationship_table_stop25to75.csv')"
+=======
     "get_all_contributors(df.read_csv(f'data/most_updated_repo_info_stop{start}to{stop}.csv'),repo_contributor_rel,contributors)"
+>>>>>>> 7ac9387173a61dbfd7eb5a7369e4869080eb413b
    ]
   }
  ],
