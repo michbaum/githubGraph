@@ -1,0 +1,49 @@
+
+Questions Tim suggested and some comments:
+How successful are commercial repositories compared to private repositories -> Don't know how to determine if the repo is commercial?
+
+How to make a GitHub repository more successful -> Maybe try something without a model? Can we see some trends of popular contributors connecting
+popular GitHub repos? Is that a reliable metric? That would run in parallel to how one can make it in the industry (-> If you know somebody who already made it big)
+-> Look at the same creation year, same topic/keyword -> Very tough question, but high impact
+
+General purpose system that allows general exploration -> Need to argue why our system is good/what questions it can answer.
+
+-----------------------------------------------
+
+How do we evaluate our visualization platform
+-> formulate some questions by ourselves
+-> build a system that can answer most if not all of them 
+-> We also need to explain the whole process, so that they know how challenging the project 
+
+-> Include that we had to pivot our project right before the first check in and why
+-> What were the challenges with the new approach, scraping etc., why did we choose the visualization we did
+-> 10-15min presentation
+
+
+-----------------------------------------------
+Brainstorming:
+
+Question to answer:
+- Does a successful contributor automatically make the repository successful (what's the metric of success)
+- Can we group related topics together efficiently -> have a multilevel graph, KNN style
+- Size of node: Popularity of Repo, width of edges: Popularity of contributors
+  -> Do popular contributors only work on popular repos
+  -> Filter the displayed repositors by number of popular contributors and then display them
+
+- Is GitHub's keyword assignement accurate w.r.t. connectivity of the repos/topics
+- Repo to repo, color by keyword -> are there distinct groups of colors, or mixed
+
+
+Visualization ideas:
+- topic to topic dataframe with # of shared repositories -> first and easiest one
+- topic to topic dataframe with # of shared contributors -> slider to change the threshold of needed shared contributors -> How do the connections look like
+
+color coding topic bubbles by language used (%) -> slider to change creation date of the repos
+--> See changes in language distribution -> Can answer the question of how fast languages spread in the coding world & what their impact is?
+
+
+Evaluation:
+- Check if the questions can be answered and maybe include the graphs for each of the questions 
+- If time: Answer the questions with traditional visualizations (for example Emma's visualization of Jupyter Notebook's spread)
+  --> Compare the two, does the interactive network make sense?
+
