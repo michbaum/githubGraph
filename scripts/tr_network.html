@@ -1,0 +1,80 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 800;
+            height: 800;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"color": "#B51606", "id": 427102031, "label": 427102031, "mass": 0.3, "name": 427102031, "shape": "dot", "size": 5}, {"color": "#833B57", "id": 343965132, "label": 343965132, "mass": 0.3, "name": 343965132, "shape": "dot", "size": 50}, {"color": {"background": "black", "border": "black"}, "id": 396476621, "label": 396476621, "mass": 0.3, "name": 396476621, "shape": "dot", "size": 1}, {"color": {"background": "black", "border": "black"}, "id": 253470610, "label": 253470610, "mass": 0.3, "name": 253470610, "shape": "dot", "size": 1}, {"color": "#CA4051", "id": 375169255, "label": 375169255, "mass": 0.3, "name": 375169255, "shape": "dot", "size": 4}, {"color": "#CA4051", "id": 264997321, "label": 264997321, "mass": 0.3, "name": 264997321, "shape": "dot", "size": 11}, {"color": "#ABE73B", "id": 360185791, "label": 360185791, "mass": 0.3, "name": 360185791, "shape": "dot", "size": 1}, {"color": "#256218", "id": 359679901, "label": 359679901, "mass": 0.3, "name": 359679901, "shape": "dot", "size": 1}, {"color": "#F1BF02", "id": 341631350, "label": 341631350, "mass": 0.3, "name": 341631350, "shape": "dot", "size": 14}, {"color": "#F1BF02", "id": 341374920, "label": 341374920, "mass": 0.3, "name": 341374920, "shape": "dot", "size": 9}, {"color": "#D93FED", "id": 305501331, "label": 305501331, "mass": 0.3, "name": 305501331, "shape": "dot", "size": 13}, {"color": "#D93FED", "id": 304553786, "label": 304553786, "mass": 0.3, "name": 304553786, "shape": "dot", "size": 5}, {"color": "#CA4051", "id": 304428109, "label": 304428109, "mass": 0.3, "name": 304428109, "shape": "dot", "size": 4}, {"color": "#CA4051", "id": 289334021, "label": 289334021, "mass": 0.3, "name": 289334021, "shape": "dot", "size": 9}, {"color": "#CA4051", "id": 298040750, "label": 298040750, "mass": 0.3, "name": 298040750, "shape": "dot", "size": 7}, {"color": "#CA4051", "id": 264303818, "label": 264303818, "mass": 0.3, "name": 264303818, "shape": "dot", "size": 15}, {"color": "#225365", "id": 297883122, "label": 297883122, "mass": 0.3, "name": 297883122, "shape": "dot", "size": 7}, {"color": "#225365", "id": 256049233, "label": 256049233, "mass": 0.3, "name": 256049233, "shape": "dot", "size": 26}, {"color": "#D93FED", "id": 295741984, "label": 295741984, "mass": 0.3, "name": 295741984, "shape": "dot", "size": 3}, {"color": "#D93FED", "id": 273070711, "label": 273070711, "mass": 0.3, "name": 273070711, "shape": "dot", "size": 4}, {"color": "#D93FED", "id": 268826962, "label": 268826962, "mass": 0.3, "name": 268826962, "shape": "dot", "size": 10}, {"color": "#F9F41C", "id": 287006044, "label": 287006044, "mass": 0.3, "name": 287006044, "shape": "dot", "size": 3}, {"color": "#F9F41C", "id": 287005781, "label": 287005781, "mass": 0.3, "name": 287005781, "shape": "dot", "size": 2}, {"color": "#F9F41C", "id": 287005473, "label": 287005473, "mass": 0.3, "name": 287005473, "shape": "dot", "size": 2}, {"color": "#F9F41C", "id": 287004729, "label": 287004729, "mass": 0.3, "name": 287004729, "shape": "dot", "size": 2}, {"color": "#825862", "id": 283052597, "label": 283052597, "mass": 0.3, "name": 283052597, "shape": "dot", "size": 8}, {"color": {"background": "black", "border": "black"}, "id": 283051915, "label": 283051915, "mass": 0.3, "name": 283051915, "shape": "dot", "size": 1}, {"color": "#CA4051", "id": 282118017, "label": 282118017, "mass": 0.3, "name": 282118017, "shape": "dot", "size": 7}, {"color": "#CA4051", "id": 248703055, "label": 248703055, "mass": 0.3, "name": 248703055, "shape": "dot", "size": 4}, {"color": "#CA4051", "id": 279688353, "label": 279688353, "mass": 0.3, "name": 279688353, "shape": "dot", "size": 4}, {"color": "#CA4051", "id": 255974833, "label": 255974833, "mass": 0.3, "name": 255974833, "shape": "dot", "size": 6}, {"color": "#CA4051", "id": 252245242, "label": 252245242, "mass": 0.3, "name": 252245242, "shape": "dot", "size": 5}, {"color": {"background": "black", "border": "black"}, "id": 265939355, "label": 265939355, "mass": 0.3, "name": 265939355, "shape": "dot", "size": 1}, {"color": {"background": "black", "border": "black"}, "id": 265078404, "label": 265078404, "mass": 0.3, "name": 265078404, "shape": "dot", "size": 1}, {"color": "#CA4051", "id": 264997740, "label": 264997740, "mass": 0.3, "name": 264997740, "shape": "dot", "size": 9}, {"color": "#D93FED", "id": 250135220, "label": 250135220, "mass": 0.3, "name": 250135220, "shape": "dot", "size": 3}, {"color": "#D93FED", "id": 250134663, "label": 250134663, "mass": 0.3, "name": 250134663, "shape": "dot", "size": 1}]);
+        edges = new vis.DataSet([{"from": 427102031, "label": 1, "to": 343965132, "toggle_smoothness": "curvedCCW", "weight": 1, "width": 2.5}, {"from": 396476621, "label": 1, "to": 253470610, "toggle_smoothness": "curvedCCW", "weight": 1, "width": 0.30000000000000004}, {"from": 375169255, "label": 1, "to": 264997321, "toggle_smoothness": "curvedCCW", "weight": 1, "width": 0.5}, {"from": 360185791, "label": 1, "to": 359679901, "toggle_smoothness": "curvedCCW", "weight": 1, "width": 0.7000000000000001}, {"from": 341631350, "label": 1, "to": 341374920, "toggle_smoothness": "curvedCCW", "weight": 1, "width": 0.9}, {"from": 305501331, "label": 1, "to": 304553786, "toggle_smoothness": "curvedCCW", "weight": 1, "width": 0.2}, {"from": 304428109, "label": 1, "to": 289334021, "toggle_smoothness": "curvedCCW", "weight": 1, "width": 0.2}, {"from": 298040750, "label": 1, "to": 264303818, "toggle_smoothness": "curvedCCW", "weight": 1, "width": 0.5}, {"from": 297883122, "label": 1, "to": 256049233, "toggle_smoothness": "curvedCCW", "weight": 1, "width": 0.2}, {"from": 295741984, "label": 1, "to": 273070711, "toggle_smoothness": "curvedCCW", "weight": 1, "width": 3.3000000000000003}, {"from": 295741984, "label": 1, "to": 268826962, "toggle_smoothness": "curvedCCW", "weight": 1, "width": 3.3000000000000003}, {"from": 287006044, "label": 1, "to": 287005781, "toggle_smoothness": "curvedCCW", "weight": 1, "width": 0.4}, {"from": 287006044, "label": 1, "to": 287005473, "toggle_smoothness": "curvedCCW", "weight": 1, "width": 0.2}, {"from": 287006044, "label": 1, "to": 287004729, "toggle_smoothness": "curvedCCW", "weight": 1, "width": 0.5}, {"from": 287005781, "label": 1, "to": 287005473, "toggle_smoothness": "curvedCCW", "weight": 1, "width": 0.4}, {"from": 287005781, "label": 1, "to": 287004729, "toggle_smoothness": "curvedCCW", "weight": 1, "width": 0.4}, {"from": 287005473, "label": 1, "to": 287004729, "toggle_smoothness": "curvedCCW", "weight": 1, "width": 0.2}, {"from": 283052597, "label": 1, "to": 283051915, "toggle_smoothness": "curvedCCW", "weight": 1, "width": 0.2}, {"from": 282118017, "label": 1, "to": 248703055, "toggle_smoothness": "curvedCCW", "weight": 1, "width": 0.4}, {"from": 279688353, "label": 1, "to": 255974833, "toggle_smoothness": "curvedCCW", "weight": 1, "width": 2.0}, {"from": 279688353, "label": 1, "to": 252245242, "toggle_smoothness": "curvedCCW", "weight": 1, "width": 1.7000000000000002}, {"from": 273070711, "label": 1, "to": 268826962, "toggle_smoothness": "curvedCCW", "weight": 1, "width": 2.8000000000000003}, {"from": 265939355, "label": 1, "to": 265078404, "toggle_smoothness": "curvedCCW", "weight": 1, "width": 1.1}, {"from": 264997740, "label": 1, "to": 264997321, "toggle_smoothness": "curvedCCW", "weight": 1, "width": 0.4}, {"from": 255974833, "label": 1, "to": 252245242, "toggle_smoothness": "curvedCCW", "weight": 1, "width": 1.5}, {"from": 250135220, "label": 1, "to": 250134663, "toggle_smoothness": "curvedCCW", "weight": 1, "width": 0.30000000000000004}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {"nodes": {"font": {"size": 0}}, "edges": {"color": {"inherit": false}, "font": {"size": 0}, "smooth": false}, "physics": {"barnesHut": {"damping": 1}}};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
