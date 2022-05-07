@@ -1,0 +1,80 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 800;
+            height: 800;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"color": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)", "highlight": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)"}}, "id": "golang", "label": "golang", "name": "golang", "shape": "dot", "size": 10, "value": 1565}, {"color": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)", "highlight": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)"}}, "id": "go", "label": "go", "name": "go", "shape": "dot", "size": 10, "value": 1321}, {"color": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)", "highlight": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)"}}, "id": "javascript", "label": "javascript", "name": "javascript", "shape": "dot", "size": 10, "value": 4208}, {"color": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)", "highlight": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)"}}, "id": "react", "label": "react", "name": "react", "shape": "dot", "size": 10, "value": 1798}, {"color": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)", "highlight": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)"}}, "id": "nodej", "label": "nodej", "name": "nodej", "shape": "dot", "size": 10, "value": 1376}, {"color": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)", "highlight": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)"}}, "id": "java", "label": "java", "name": "java", "shape": "dot", "size": 10, "value": 2502}, {"color": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)", "highlight": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)"}}, "id": "android", "label": "android", "name": "android", "shape": "dot", "size": 10, "value": 2844}, {"color": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)", "highlight": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)"}}, "id": "sql", "label": "sql", "name": "sql", "shape": "dot", "size": 10, "value": 899}, {"color": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)", "highlight": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)"}}, "id": "databas", "label": "databas", "name": "databas", "shape": "dot", "size": 10, "value": 1978}, {"color": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)", "highlight": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)"}}, "id": "hacktoberfest", "label": "hacktoberfest", "name": "hacktoberfest", "shape": "dot", "size": 10, "value": 4748}, {"color": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)", "highlight": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)"}}, "id": "python", "label": "python", "name": "python", "shape": "dot", "size": 10, "value": 6314}, {"color": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)", "highlight": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)"}}, "id": "data", "label": "data", "name": "data", "shape": "dot", "size": 10, "value": 3734}, {"color": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)", "highlight": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)"}}, "id": "algorithm", "label": "algorithm", "name": "algorithm", "shape": "dot", "size": 10, "value": 1828}, {"color": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)", "highlight": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)"}}, "id": "flask", "label": "flask", "name": "flask", "shape": "dot", "size": 10, "value": 1157}, {"color": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)", "highlight": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)"}}, "id": "machin", "label": "machin", "name": "machin", "shape": "dot", "size": 10, "value": 3674}, {"color": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)", "highlight": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)"}}, "id": "deep", "label": "deep", "name": "deep", "shape": "dot", "size": 10, "value": 3171}, {"color": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)", "highlight": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)"}}, "id": "pytorch", "label": "pytorch", "name": "pytorch", "shape": "dot", "size": 10, "value": 1280}, {"color": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)", "highlight": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)"}}, "id": "object", "label": "object", "name": "object", "shape": "dot", "size": 10, "value": 1200}, {"color": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)", "highlight": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)"}}, "id": "io", "label": "io", "name": "io", "shape": "dot", "size": 10, "value": 2495}, {"color": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)", "highlight": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)"}}, "id": "window", "label": "window", "name": "window", "shape": "dot", "size": 10, "value": 1865}, {"color": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)", "highlight": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)"}}, "id": "linux", "label": "linux", "name": "linux", "shape": "dot", "size": 10, "value": 1538}, {"color": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)", "highlight": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)"}}, "id": "maco", "label": "maco", "name": "maco", "shape": "dot", "size": 10, "value": 2179}, {"color": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)", "highlight": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)"}}, "id": "swift", "label": "swift", "name": "swift", "shape": "dot", "size": 10, "value": 1837}, {"color": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)", "highlight": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)"}}, "id": "tensorflow", "label": "tensorflow", "name": "tensorflow", "shape": "dot", "size": 10, "value": 1260}, {"color": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)", "highlight": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)"}}, "id": "neural", "label": "neural", "name": "neural", "shape": "dot", "size": 10, "value": 1422}, {"color": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)", "highlight": {"background": "rgba(225,213,252,1)", "border": "rgba(126,80,233,1)"}}, "id": "natur", "label": "natur", "name": "natur", "shape": "dot", "size": 10, "value": 954}]);
+        edges = new vis.DataSet([{"from": "golang", "label": 1, "to": "go", "toggle_smoothness": "curvedCCW", "value": 789, "weight": 1}, {"from": "javascript", "label": 1, "to": "react", "toggle_smoothness": "curvedCCW", "value": 534, "weight": 1}, {"from": "javascript", "label": 1, "to": "nodej", "toggle_smoothness": "curvedCCW", "value": 735, "weight": 1}, {"from": "java", "label": 1, "to": "android", "toggle_smoothness": "curvedCCW", "value": 619, "weight": 1}, {"from": "sql", "label": 1, "to": "databas", "toggle_smoothness": "curvedCCW", "value": 590, "weight": 1}, {"from": "hacktoberfest", "label": 1, "to": "python", "toggle_smoothness": "curvedCCW", "value": 628, "weight": 1}, {"from": "hacktoberfest", "label": 1, "to": "data", "toggle_smoothness": "curvedCCW", "value": 555, "weight": 1}, {"from": "hacktoberfest", "label": 1, "to": "algorithm", "toggle_smoothness": "curvedCCW", "value": 599, "weight": 1}, {"from": "flask", "label": 1, "to": "python", "toggle_smoothness": "curvedCCW", "value": 806, "weight": 1}, {"from": "python", "label": 1, "to": "data", "toggle_smoothness": "curvedCCW", "value": 1180, "weight": 1}, {"from": "python", "label": 1, "to": "machin", "toggle_smoothness": "curvedCCW", "value": 1364, "weight": 1}, {"from": "python", "label": 1, "to": "deep", "toggle_smoothness": "curvedCCW", "value": 787, "weight": 1}, {"from": "algorithm", "label": 1, "to": "data", "toggle_smoothness": "curvedCCW", "value": 837, "weight": 1}, {"from": "pytorch", "label": 1, "to": "machin", "toggle_smoothness": "curvedCCW", "value": 550, "weight": 1}, {"from": "pytorch", "label": 1, "to": "deep", "toggle_smoothness": "curvedCCW", "value": 744, "weight": 1}, {"from": "object", "label": 1, "to": "io", "toggle_smoothness": "curvedCCW", "value": 502, "weight": 1}, {"from": "window", "label": 1, "to": "linux", "toggle_smoothness": "curvedCCW", "value": 606, "weight": 1}, {"from": "maco", "label": 1, "to": "io", "toggle_smoothness": "curvedCCW", "value": 552, "weight": 1}, {"from": "maco", "label": 1, "to": "swift", "toggle_smoothness": "curvedCCW", "value": 561, "weight": 1}, {"from": "maco", "label": 1, "to": "linux", "toggle_smoothness": "curvedCCW", "value": 569, "weight": 1}, {"from": "tensorflow", "label": 1, "to": "machin", "toggle_smoothness": "curvedCCW", "value": 646, "weight": 1}, {"from": "tensorflow", "label": 1, "to": "deep", "toggle_smoothness": "curvedCCW", "value": 772, "weight": 1}, {"from": "neural", "label": 1, "to": "machin", "toggle_smoothness": "curvedCCW", "value": 844, "weight": 1}, {"from": "neural", "label": 1, "to": "deep", "toggle_smoothness": "curvedCCW", "value": 962, "weight": 1}, {"from": "deep", "label": 1, "to": "data", "toggle_smoothness": "curvedCCW", "value": 503, "weight": 1}, {"from": "deep", "label": 1, "to": "machin", "toggle_smoothness": "curvedCCW", "value": 1752, "weight": 1}, {"from": "natur", "label": 1, "to": "machin", "toggle_smoothness": "curvedCCW", "value": 542, "weight": 1}, {"from": "machin", "label": 1, "to": "data", "toggle_smoothness": "curvedCCW", "value": 1112, "weight": 1}, {"from": "swift", "label": 1, "to": "io", "toggle_smoothness": "curvedCCW", "value": 1121, "weight": 1}, {"from": "android", "label": 1, "to": "io", "toggle_smoothness": "curvedCCW", "value": 785, "weight": 1}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {"nodes": {"labelHighlightBold": true, "scaling": {"min": 1, "max": 50}}, "edges": {"color": {"inherit": true}, "font": {"color": "rgba(52,52,52,0)", "size": 0, "background": "rgba(52,52,52,0)", "strokeColor": "rgba(255,255,255,0)"}, "smooth": true, "labelHighlightBold": false}, "physics": {"barnesHut": {"damping": 1}}};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
